@@ -62,7 +62,8 @@
     "allowScripts": {
       "@lavamoat/preinstall-always-fail": false,
       "keccak": false,
-      "secp256k1": false
+      "secp256k1": false,
+      "@likloadm/ethereumjs-wallet": false
     }
   }
 }
