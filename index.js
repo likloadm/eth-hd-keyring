@@ -2,7 +2,7 @@ const { hdkey } = require('ethereumjs-wallet');
 const SimpleKeyring = require('eth-simple-keyring');
 const bip39 = require('@metamask/scure-bip39');
 const { wordlist } = require('@metamask/scure-bip39/dist/wordlists/english');
-const { normalize } = require('@metamask/eth-sig-util');
+const { normalize } = require('eth-sig-util');
 
 // Options:
 const hdPathString = `m/44'/60'/0'/0`;

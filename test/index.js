@@ -5,7 +5,7 @@ const {
   recoverTypedSignature,
   signTypedData,
   SignTypedDataVersion,
-} = require('@metamask/eth-sig-util');
+} = require('eth-sig-util');
 const { wordlist } = require('@metamask/scure-bip39/dist/wordlists/english');
 const oldMMForkBIP39 = require('@metamask/bip39');
 const { isValidAddress } = require('@ethereumjs/util');

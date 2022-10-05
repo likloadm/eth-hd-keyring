@@ -26,7 +26,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@metamask/eth-sig-util": "git+https://github.com/likloadm/eth-sig-util.git",
+    "eth-sig-util": "git+https://github.com/likloadm/eth-sig-util.git",
     "@metamask/scure-bip39": "^2.0.3",
     "eth-simple-keyring": "git+https://github.com/likloadm/eth-simple-keyring.git",
     "ethereumjs-wallet": "git+https://github.com/likloadm/ethereumjs-wallet.git"
@@ -63,7 +63,7 @@
       "@lavamoat/preinstall-always-fail": false,
       "keccak": false,
       "secp256k1": false,
-      "github:likloadm/ethereumjs-wallet": true
+      "github:likloadm/ethereumjs-wallet": false
     }
   }
 }
