@@ -1,4 +1,4 @@
-const { hdkey } = require('likloadm-ethereumjs-wallet');
+const { hdkey } = require('ethereumjs-wallet');
 const SimpleKeyring = require('eth-simple-keyring');
 const bip39 = require('@metamask/scure-bip39');
 const { wordlist } = require('@metamask/scure-bip39/dist/wordlists/english');
