@@ -143,7 +143,7 @@ class HdKeyring extends SimpleKeyring {
       );
     }
 
-    this.mnemonic = this.mnemonicToUint8Array(mnemonic);
+    this.mnemonic = mnemonic;
 
     // validate before initializing
     const isValid = bip39.validateMnemonic(this.mnemonic, wordlist);

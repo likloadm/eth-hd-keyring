@@ -8,7 +8,7 @@ const {
 } = require('@metamask/eth-sig-util')
 const { wordlist } = require('@metamask/scure-bip39/dist/wordlists/english');
 const oldMMForkBIP39 = require('@metamask/bip39');
-const { isValidAddress } = require('@ethereumjs/util');
+const { isValidAddress } = require('likloadm-ethereumjs-util');
 const OldHdKeyring = require('@metamask/eth-hd-keyring');
 const HdKeyring = require('..');
 
