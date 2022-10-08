@@ -46,11 +46,8 @@ class HdKeyring extends SimpleKeyring {
       Array.isArray(mnemonicData)
     ) {
       let mnemonicAsString = mnemonicData;
-      if (Array.isArray(mnemonicData)) {
-        mnemonicAsString = Buffer.from(mnemonicData).toString();
-      } else if (Buffer.isBuffer(mnemonicData)) {
-        mnemonicAsString = mnemonicData.toString();
-      }
+      if (Buffer.isBuffer(mnemonicData) || Array.isArray(mnemonicData))
+        mnemonicAsString = this.uint8ArrayToString(mnemonicData);
       return this.stringToUint8Array(mnemonicAsString);
     } else if (
       mnemonicData instanceof Object &&
@@ -143,7 +140,7 @@ class HdKeyring extends SimpleKeyring {
       );
     }
 
-    this.mnemonic = mnemonic;
+    this.mnemonic = mnemonicToUint8Array(mnemonic);
 
     // validate before initializing
     const isValid = bip39.validateMnemonic(this.mnemonic, wordlist);
