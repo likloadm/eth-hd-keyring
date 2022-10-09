@@ -46,6 +46,8 @@ class HdKeyring extends SimpleKeyring {
       Array.isArray(mnemonicData)
     ) {
       let mnemonicAsString = mnemonicData;
+      if (typeof mnemonicData === 'string')
+        return this.stringToUint8Array(mnemonicAsString);
       if (Buffer.isBuffer(mnemonicData) || Array.isArray(mnemonicData))
         mnemonicAsString = this.uint8ArrayToString(mnemonicData);
       return this.stringToUint8Array(mnemonicAsString);
